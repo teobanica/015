@@ -1,0 +1,11 @@
+{
+  "title": "Easiness over characteristic zero fields",
+  "description": "<p>Preprint (24 pages, PDF and LaTeX source), together with the code used for its computations.</p><p>The easy quantum groups have intertwiners T_&pi;, depending on set-theoretic partitions &pi;, with integer entries, and so are defined over Q. We study them over an arbitrary field F of characteristic 0. Easiness itself does not depend on F, the Haar functional being given by the Weingarten formula, and the field comes into play via the F-forms: those of O_N^+, coming from the central simple algebras with orthogonal involution and from the quadratic forms up to similarity, and a family of F-forms of S_N^+, coming from the finite &eacute;tale algebras. Over Q, the free bistochastic group B_N^+ is isomorphic to O_{N-1}^+ precisely when N is an odd square, a multiple of 4, or 2 modulo 4 and a sum of 2 squares. We also discuss the quantum symmetries of the free quadrics, described by bilinear forms, and a rational form of the quantum group G_3 coming from the color sector of the Standard Model. Finally, we discuss free probability over F, and the p-adic case, where the Poisson laws are bounded measures on Z_p only for small parameters, while the Gaussian laws and the laws of the main characters of O_N^+ and S_N^+ never are.</p>",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "creators": [
+    {"name": "Opus, Claude"},
+    {"name": "Banica, Teodor", "affiliation": "CY Cergy Paris Université", "orcid": "0000-0003-4680-0364"}
+  ],
+  "keywords": ["easy quantum group", "Galois form", "Hopf algebra", "central simple algebra", "quadratic form", "free quadric", "quantum permutation group", "p-adic measure"]
+}
