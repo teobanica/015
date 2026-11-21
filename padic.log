@@ -1,0 +1,88 @@
+== (2k-1)!! : v_2 = 0, and v_p = (k+s_p(k)-s_p(2k))/(p-1) for p odd
+checked k<300: True
+== Catalan: v_2(C_k) = s_2(k+1)-1
+checked k<1000: True
+== Kummer: v_p(binom(2k,k)) = carries of k+k in base p = (2 s_p(k) - s_p(2k))/(p-1)
+checked p=2,3,5,7, k<500: True
+== Bell congruences (Touchard/Barsky): B_{n+k(p)p^{h-1}} = B_n mod p^h, k(p)=(p^p-1)/(p-1)
+ p=3 h=1 period 13: True
+ p=3 h=2 period 39: True
+ p=2 mod 2, period 3: True
+ p=2 mod 2^2, period 3*2^1=6 (fails): False
+ p=2 mod 2^2, period 3*2^2=12: True
+ p=2 mod 2^3, period 3*2^2=12 (fails): False
+ p=2 mod 2^3, period 3*2^3=24: True
+ p=2 mod 2^4, period 3*2^3=24 (fails): False
+ p=2 mod 2^4, period 3*2^4=48: True
+ p=2 mod 2^5, period 3*2^4=48 (fails): False
+ p=2 mod 2^5, period 3*2^5=96: True
+ p=2 mod 2^6, period 3*2^5=96 (fails): False
+ p=2 mod 2^6, period 3*2^6=192: True
+ B_n even iff n = 2 mod 3 (n<400): True
+== involution numbers t_n = |P_12(n)| (moments of 1+N(0,1)), mod p^h periodicity, p odd
+ p=2: I_0=1, I_2=2, so t_{n+2} = t_n mod 2 fails at n=0: True
+ p=3 h=1 period, from n=0: 3
+ p=3 h=2 period, from n=0: 9
+ p=5 h=1 period, from n=0: 5
+ p=5 h=2 period, from n=0: 25
+ p=7 h=1 period, from n=0: 7
+ p=7 h=2 period, from n=0: 49
+== Catalan numbers are not moments of a bounded measure on Z_p:
+   k=(p^m-1)/2 gives C_k a unit, k'=k+(p-1)p^(h-1), h=m-1, gives p | C_k', although
+   x^(k+phi(p^h)) = x^k mod p^h on Z_p, for k>=h
+   p=3 m=3: v_p(C_k)=0 v_p(C_k')=1
+   p=3 m=4: v_p(C_k)=0 v_p(C_k')=1
+   p=3 m=5: v_p(C_k)=0 v_p(C_k')=1
+   p=5 m=3: v_p(C_k)=0 v_p(C_k')=1
+   p=5 m=4: v_p(C_k)=0 v_p(C_k')=1
+   p=5 m=5: v_p(C_k)=0 v_p(C_k')=1
+   p=7 m=3: v_p(C_k)=0 v_p(C_k')=1
+   p=7 m=4: v_p(C_k)=0 v_p(C_k')=1
+   p=7 m=5: v_p(C_k)=0 v_p(C_k')=1
+   p=2 m=4: k=2^m-1, k'=k+2^(m-1): v_2(C_k)=0 v_2(C_k')=1
+   p=2 m=6: k=2^m-1, k'=k+2^(m-1): v_2(C_k)=0 v_2(C_k')=1
+   p=2 m=8: k=2^m-1, k'=k+2^(m-1): v_2(C_k)=0 v_2(C_k')=1
+== Poisson(t) binomial moments are t^n/n!, bounded iff v_p(t) >= 1/(p-1)
+   p=2 t=1: b_n = t^n/n! for n<40: True, min v_p = -35
+   p=2 t=2: b_n = t^n/n! for n<40: True, min v_p = 0
+   p=2 t=4: b_n = t^n/n! for n<40: True, min v_p = 0
+   p=3 t=1: b_n = t^n/n! for n<40: True, min v_p = -18
+   p=3 t=3: b_n = t^n/n! for n<40: True, min v_p = 0
+   p=3 t=9: b_n = t^n/n! for n<40: True, min v_p = 0
+   p=5 t=1: b_n = t^n/n! for n<40: True, min v_p = -8
+   p=5 t=5: b_n = t^n/n! for n<40: True, min v_p = 0
+   p=5 t=25: b_n = t^n/n! for n<40: True, min v_p = 0
+== binomial moments b_n = L(binom(x,n)); bounded <=> bounded measure on Z_p,
+   and min v_p(b_n) >= 0 <=> measure of norm <= 1 (integral)
+ Gaussian N(0,1)    p=2  min v_p(b_j), j<60:  -47   v_p(b_j) at j=10,20,40,59: [-7, -15, -33, -47]
+ Gaussian N(0,1)    p=3  min v_p(b_j), j<60:  -23   v_p(b_j) at j=10,20,40,59: [-3, -7, -15, -23]
+ Gaussian N(0,1)    p=5  min v_p(b_j), j<60:  -12   v_p(b_j) at j=10,20,40,59: [-2, -4, -8, -12]
+ semicircle         p=2  min v_p(b_j), j<60:  -54   v_p(b_j) at j=10,20,40,59: [-8, -17, -30, -54]
+ semicircle         p=3  min v_p(b_j), j<60:  -27   v_p(b_j) at j=10,20,40,59: [-4, -8, -17, -27]
+ semicircle         p=5  min v_p(b_j), j<60:  -13   v_p(b_j) at j=10,20,40,59: [-2, -4, -9, -13]
+ Poisson(1)         p=2  min v_p(b_j), j<60:  -54   v_p(b_j) at j=10,20,40,59: [-8, -18, -38, -54]
+ Poisson(1)         p=3  min v_p(b_j), j<60:  -27   v_p(b_j) at j=10,20,40,59: [-4, -8, -18, -27]
+ Poisson(1)         p=5  min v_p(b_j), j<60:  -13   v_p(b_j) at j=10,20,40,59: [-2, -4, -9, -13]
+ free Poisson(1)    p=2  min v_p(b_j), j<60:  -54   v_p(b_j) at j=10,20,40,59: [-7, -14, -36, -54]
+ free Poisson(1)    p=3  min v_p(b_j), j<60:  -27   v_p(b_j) at j=10,20,40,59: [-2, -8, -16, -27]
+ free Poisson(1)    p=5  min v_p(b_j), j<60:  -13   v_p(b_j) at j=10,20,40,59: [-2, -4, -9, -13]
+ Poisson(2)         p=2  min v_p(b_j), j<60:    0   v_p(b_j) at j=10,20,40,59: [2, 2, 2, 5]
+ Poisson(2)         p=3  min v_p(b_j), j<60:  -27   v_p(b_j) at j=10,20,40,59: [-4, -8, -18, -27]
+ Poisson(2)         p=5  min v_p(b_j), j<60:  -13   v_p(b_j) at j=10,20,40,59: [-2, -4, -9, -13]
+ free Poisson(2)    p=2  min v_p(b_j), j<60:  -38   v_p(b_j) at j=10,20,40,59: [-2, -11, -25, -38]
+ free Poisson(2)    p=3  min v_p(b_j), j<60:  -27   v_p(b_j) at j=10,20,40,59: [-2, -8, -17, -24]
+ free Poisson(2)    p=5  min v_p(b_j), j<60:  -13   v_p(b_j) at j=10,20,40,59: [-2, -2, -9, -13]
+ Poisson(3)         p=2  min v_p(b_j), j<60:  -54   v_p(b_j) at j=10,20,40,59: [-8, -18, -38, -54]
+ Poisson(3)         p=3  min v_p(b_j), j<60:    0   v_p(b_j) at j=10,20,40,59: [6, 12, 22, 32]
+ Poisson(3)         p=5  min v_p(b_j), j<60:  -13   v_p(b_j) at j=10,20,40,59: [-2, -4, -9, -13]
+ free Poisson(3)    p=2  min v_p(b_j), j<60:  -54   v_p(b_j) at j=10,20,40,59: [-7, -16, -33, -54]
+ free Poisson(3)    p=3  min v_p(b_j), j<60:  -16   v_p(b_j) at j=10,20,40,59: [1, -3, -9, -16]
+ free Poisson(3)    p=5  min v_p(b_j), j<60:  -13   v_p(b_j) at j=10,20,40,59: [-2, -2, -9, -13]
+ Poisson(5)         p=2  min v_p(b_j), j<60:  -54   v_p(b_j) at j=10,20,40,59: [-8, -18, -38, -54]
+ Poisson(5)         p=3  min v_p(b_j), j<60:  -27   v_p(b_j) at j=10,20,40,59: [-4, -8, -18, -27]
+ Poisson(5)         p=5  min v_p(b_j), j<60:    0   v_p(b_j) at j=10,20,40,59: [8, 16, 31, 46]
+ free Poisson(5)    p=2  min v_p(b_j), j<60:  -54   v_p(b_j) at j=10,20,40,59: [-7, -15, -36, -54]
+ free Poisson(5)    p=3  min v_p(b_j), j<60:  -27   v_p(b_j) at j=10,20,40,59: [-2, -8, -17, -26]
+ free Poisson(5)    p=5  min v_p(b_j), j<60:   -6   v_p(b_j) at j=10,20,40,59: [0, -1, -4, -6]
+== dilated Gaussian, sigma=25 at p=5: moments m_2k = 25^(2k) (2k-1)!!
+   max |b_n|_5 for n<160: 5^1, first attained at n=150

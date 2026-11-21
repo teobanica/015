@@ -1,0 +1,70 @@
+NC  k=2  |D(k)|=2  deg det=3  integer roots {root: mult} = {0: 2, 1: 1}  remaining factor degree 0, leading coeff 1
+NC  k=3  |D(k)|=5  deg det=10  integer roots {root: mult} = {0: 5, 1: 4, 2: 1}  remaining factor degree 0, leading coeff 1
+NC  k=4  |D(k)|=14  deg det=35  integer roots {root: mult} = {0: 14, 1: 13, 2: 6}  remaining factor degree 2, leading coeff 1
+NC  k=5  |D(k)|=42  deg det=126  integer roots {root: mult} = {0: 42, 1: 41, 2: 26, 3: 1}  remaining factor degree 16, leading coeff 1
+P   k=2  |D(k)|=2  deg det=3  integer roots {root: mult} = {0: 2, 1: 1}  remaining factor degree 0, leading coeff 1
+P   k=3  |D(k)|=5  deg det=10  integer roots {root: mult} = {0: 5, 1: 4, 2: 1}  remaining factor degree 0, leading coeff 1
+P   k=4  |D(k)|=15  deg det=37  integer roots {root: mult} = {0: 15, 1: 14, 2: 7, 3: 1}  remaining factor degree 0, leading coeff 1
+NC2 k=2  |D(k)|=2  deg det=4  integer roots {root: mult} = {-1: 1, 0: 2, 1: 1}  remaining factor degree 0, leading coeff 1
+NC2 k=3  |D(k)|=5  deg det=15  integer roots {root: mult} = {-1: 4, 0: 5, 1: 4}  remaining factor degree 2, leading coeff 1
+NC2 k=4  |D(k)|=14  deg det=56  integer roots {root: mult} = {-1: 13, 0: 14, 1: 13}  remaining factor degree 16, leading coeff 1
+P2  k=2  |D(k)|=3  deg det=6  integer roots {root: mult} = {-2: 1, 0: 3, 1: 2}  remaining factor degree 0, leading coeff 1
+P2  k=3  |D(k)|=15  deg det=45  integer roots {root: mult} = {-4: 1, -2: 10, 0: 15, 1: 14, 2: 5}  remaining factor degree 0, leading coeff 1
+== Weingarten for S_N^+ at k=2, check W = 1/(N^2(N-1)) [[N^2,-N],[-N,N]], one-block partition first
+ N=2 blocks order [1, 2]  W=[['1', '-1/2'], ['-1/2', '1/2']]  matches: True
+ N=3 blocks order [1, 2]  W=[['1/2', '-1/6'], ['-1/6', '1/6']]  matches: True
+ N=4 blocks order [1, 2]  W=[['1/3', '-1/12'], ['-1/12', '1/12']]  matches: True
+ N=5 blocks order [1, 2]  W=[['1/4', '-1/20'], ['-1/20', '1/20']]  matches: True
+ N=7 blocks order [1, 2]  W=[['1/6', '-1/42'], ['-1/42', '1/42']]  matches: True
+== minimal p-adic valuation of Weingarten entries, S_N^+ (NC) and S_N (P), k=4
+ NC k=4 N=4  min v_p(W) = {2: -3, 3: -1, 5: -1, 7: 0, 11: 0}
+ NC k=4 N=5  min v_p(W) = {2: -2, 3: -1, 5: -1, 7: 0, 11: -1}
+ NC k=4 N=6  min v_p(W) = {2: -3, 3: -1, 5: -1, 7: 0, 11: 0}
+ NC k=4 N=8  min v_p(W) = {2: -4, 3: -1, 5: 0, 7: -1, 11: 0}
+ NC k=4 N=9  min v_p(W) = {2: -3, 3: -2, 5: -1, 7: -1, 11: -1}
+ NC k=4 N=10  min v_p(W) = {2: -4, 3: -2, 5: -1, 7: 0, 11: 0}
+ NC k=4 N=12  min v_p(W) = {2: -3, 3: -1, 5: -1, 7: 0, 11: -1}
+ P k=4 N=4  min v_p(W) = {2: -3, 3: -1, 5: 0, 7: 0, 11: 0}
+ P k=4 N=5  min v_p(W) = {2: -3, 3: -1, 5: -1, 7: 0, 11: 0}
+ P k=4 N=6  min v_p(W) = {2: -3, 3: -2, 5: -1, 7: 0, 11: 0}
+ P k=4 N=8  min v_p(W) = {2: -4, 3: -1, 5: -1, 7: -1, 11: 0}
+ P k=4 N=9  min v_p(W) = {2: -4, 3: -3, 5: 0, 7: -1, 11: 0}
+ P k=4 N=10  min v_p(W) = {2: -4, 3: -2, 5: -1, 7: -1, 11: 0}
+ P k=4 N=12  min v_p(W) = {2: -3, 3: -3, 5: -1, 7: 0, 11: -1}
+== Hankel determinants: Catalan numbers (law of chi for S_N^+, N>=4) versus fixed points of S_N
+  det(C_{i+j})_{i,j<r}, r=1..12: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  S_2: atoms [0, 2], Hankel rank 2
+  S_3: atoms [0, 1, 3], Hankel rank 3
+  S_4: atoms [0, 1, 2, 4], Hankel rank 4
+  S_5: atoms [0, 1, 2, 3, 5], Hankel rank 5
+  S_6: atoms [0, 1, 2, 3, 4, 6], Hankel rank 6
+  S_7: atoms [0, 1, 2, 3, 4, 5, 7], Hankel rank 7
+  S_8: atoms [0, 1, 2, 3, 4, 5, 6, 8], Hankel rank 8
+== closed formulas: Lindstrom (S_N), zonal (O_N), Di Francesco (O_N^+), fattening (S_N^+, checked at N=4,9,16)
+  P    2 points  |D|=  2  closed formula = exact determinant at several N: True
+  P    3 points  |D|=  5  closed formula = exact determinant at several N: True
+  P    4 points  |D|= 15  closed formula = exact determinant at several N: True
+  P    5 points  |D|= 52  closed formula = exact determinant at several N: True
+  P2   4 points  |D|=  3  closed formula = exact determinant at several N: True
+  P2   6 points  |D|= 15  closed formula = exact determinant at several N: True
+  P2   8 points  |D|=105  closed formula = exact determinant at several N: True
+  NC2  4 points  |D|=  2  closed formula = exact determinant at several N: True
+  NC2  6 points  |D|=  5  closed formula = exact determinant at several N: True
+  NC2  8 points  |D|= 14  closed formula = exact determinant at several N: True
+  NC2 10 points  |D|= 42  closed formula = exact determinant at several N: True
+  NC   2 points  |D|=  2  closed formula = exact determinant at several N: True
+  NC   3 points  |D|=  5  closed formula = exact determinant at several N: True
+  NC   4 points  |D|= 14  closed formula = exact determinant at several N: True
+  NC   5 points  |D|= 42  closed formula = exact determinant at several N: True
+  NC   6 points  |D|=132  closed formula = exact determinant at several N: True
+== O_N^+ at 12 points (k=6), Di Francesco formula = exact determinant, N=2,3,4 (a few seconds)
+  NC2 12 points |D|=132: True
+== Di Francesco exponents a_km can be negative, but prod_m U_m(N)^a_km is in Z[N]
+  k=1 exponents [1]  polynomial in Z[N]: True
+  k=2 exponents [2, 1]  polynomial in Z[N]: True
+  k=3 exponents [4, 4, 1]  polynomial in Z[N]: True
+  k=4 exponents [8, 13, 6, 1]  polynomial in Z[N]: True
+  k=5 exponents [15, 40, 26, 8, 1]  polynomial in Z[N]: True
+  k=6 exponents [22, 121, 100, 43, 10, 1]  polynomial in Z[N]: True
+  k=7 exponents [0, 364, 364, 196, 64, 12, 1]  polynomial in Z[N]: True
+  k=8 exponents [-208, 1092, 1288, 820, 336, 89, 14, 1]  polynomial in Z[N]: True

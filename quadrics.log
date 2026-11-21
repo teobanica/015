@@ -1,0 +1,25 @@
+== elliptic conic: H = [[1, i l],[-i l, 1]], q = (l-1)/(l+1), check q + 1/q = -t
+  l=0.00  t=2.000000  -(q+1/q)=2.000000  t real: True
+  l=0.30  t=2.395604  -(q+1/q)=2.395604  t real: True
+  l=0.70  t=5.843137  -(q+1/q)=5.843137  t real: True
+  l=1.50  t=-5.200000  -(q+1/q)=-5.200000  t real: True
+  l=3.00  t=-2.500000  -(q+1/q)=-2.500000  t real: True
+== hyperbolic conic: H = [[1, i m],[-i m, -1]], m = tan(theta), check t = 2cos(2 theta), q = -e^{+-2 i theta}
+  theta=0.00  t=2.000000  2cos(2theta)=2.000000  q=[(-1+0j), (-1+0j)]  -e^{2i theta}=(-1-0j)
+  theta=0.20  t=1.842122  2cos(2theta)=1.842122  q=[(-0.921061+0.389418j), (-0.921061-0.389418j)]  -e^{2i theta}=(-0.921061-0.389418j)
+  theta=0.60  t=0.724716  2cos(2theta)=0.724716  q=[(-0.362358+0.932039j), (-0.362358-0.932039j)]  -e^{2i theta}=(-0.362358-0.932039j)
+  theta=1.20  t=-1.474787  2cos(2theta)=-1.474787  q=[(0.737394-0.675463j), (0.737394+0.675463j)]  -e^{2i theta}=(0.737394-0.675463j)
+== elliptic quadric in N=2n(+1) variables: t = sum_k -(q_k+1/q_k) (+1 if N odd)
+  N=4  t=0.043868  predicted=0.043868
+  N=5  t=5.710016  predicted=5.710016
+  N=6  t=-15.613798  predicted=-15.613798
+  N=7  t=2.503797  predicted=2.503797
+== H > 0 random: H = L^*L, F = L^{-t} L^*, check F Fbar = 1 and tr(F^*F) = t
+  N=2  |L^*L-H|=8.9e-16  |F Fbar - 1|=0.0e+00  tr(F^*F)=3.973650  t=3.973650
+  N=3  |L^*L-H|=8.9e-16  |F Fbar - 1|=5.6e-17  tr(F^*F)=3.410288  t=3.410288
+  N=4  |L^*L-H|=1.8e-15  |F Fbar - 1|=1.2e-16  tr(F^*F)=5.670296  t=5.670296
+  N=6  |L^*L-H|=3.6e-15  |F Fbar - 1|=1.8e-16  tr(F^*F)=6.603571  t=6.603571
+== free conics over Q: A = S + k J, d = det S, r = k^2/d, check t = tr(A^{-1}A^t) = 2(1-r)/(1+r), exactly
+  2000 random rational A: True
+== invariance of r under A -> c P^t A P, P random rational
+  500 random congruences: True
